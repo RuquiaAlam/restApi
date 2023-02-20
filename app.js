@@ -44,8 +44,8 @@ MongoClient.connect(MONGO_URL, (err, client) => {
 });
 
   // location endpoint
-app.get("/location", (req, res)  => {
-  db.collection("location").find().toArray((err,result) =>{
+app.get("/locations", (req, res)  => {
+  db.collection("locations").find().toArray((err,result) =>{
 
     if(err) throw err;
     res.send(result);
