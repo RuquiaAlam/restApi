@@ -71,7 +71,19 @@ app.get("/locations", (req, res)  => {
 
  app.get("/zomato",(req,res) =>
  {
-  db.collection("zomato").find().toArray((err,result)=>
+  let query = {}
+  let stateId = Number(req.query.state_id);
+  let mealId = Number(req.query.mealId);
+  if(stateId)
+  {
+    query ={state_id : stateId}
+
+  }
+else if(mealId)
+{
+  query = {"mealType.mealType_id":mealId}
+}
+  db.collection("zomato").find(query).toArray((err,result)=>
   {
     if(err) throw err;
     res.send(result);
