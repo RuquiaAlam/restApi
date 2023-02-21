@@ -51,7 +51,7 @@ app.get("/locations", (req, res)  => {
     res.send(result);
   });
 });
-
+ // mealType endpoint
   app.get("/mealType", (req, res) => {
 
     db.collection("mealType").find().toArray((err, result) => {
@@ -59,7 +59,8 @@ app.get("/locations", (req, res)  => {
         res.send(result);
       });
     });
- app.get("/menu",(req,res) =>
+    //menu endpoint
+     app.get("/menu",(req,res) =>
  {
   db.collection("menu").find().toArray((err,result)=>
   {

@@ -1,10 +1,17 @@
 Page 1
 => List of city (Get) 
+https://zomato-appnew.onrender.com/locations
+http://localhost:8080/locations
+
 => List of restaurant (Get) 
+https://zomato-appnew.onrender.com/zomato
+http://localhost:8080/zomato
 
 => Restaurant on the basis of city (Get) 
 
 => List of QuickSearch (Get) 
+https://zomato-appnew.onrender.com/menu
+http://localhost:8080/menu
 
 Page 2
 => List of restaurants on basis of meal (Get) 
