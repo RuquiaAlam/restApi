@@ -59,9 +59,9 @@ app.get("/locations", (req, res)  => {
         res.send(result);
       });
     });
- app.get("/mealType",(req,res) =>
+ app.get("/menu",(req,res) =>
  {
-  db.collection("mealType").find().toArray((err,result)=>
+  db.collection("menu").find().toArray((err,result)=>
   {
     if(err) throw err;
     res.send(result);
